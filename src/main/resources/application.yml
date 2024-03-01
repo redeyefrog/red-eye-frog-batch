@@ -1,0 +1,24 @@
+logging:
+  level:
+    root: info
+    org.springframework: info
+    org.redeyefrog: debug
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
+  pattern:
+    console: "%red(%d{yyyy-MM-dd HH:mm:ss}) %yellow([%thread]) %highlight(%-5level) %logger:%L - %green(%msg%n)"
+
+spring:
+  batch:
+    job:
+      enabled: true
+    jdbc:
+      initialize-schema: never # never, embedded, always
+  main:
+    web-application-type: none # none, servlet, reactive
+  profiles:
+    active: local
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml

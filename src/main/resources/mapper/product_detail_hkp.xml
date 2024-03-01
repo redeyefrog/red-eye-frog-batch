@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product_detail_hkp">
+    <insert id="insertExpireDetail">
+        INSERT INTO REFROG.PRODUCT_DETAIL_HKP
+        (
+        DETAIL_SEQ,
+        MASTER_SEQ,
+        PRODUCT_NAME,
+        QUANTITY,
+        UNIT_PRICE,
+        AMOUNT,
+        CREATE_TIME,
+        UPDATE_TIME
+        )
+        VALUES
+        (
+        #{detailSeq},
+        #{masterSeq},
+        #{productName},
+        #{quantity},
+        #{unitPrice},
+        #{amount},
+        #{createTime},
+        #{updateTime}
+        )
+    </insert>
+
+</mapper>
